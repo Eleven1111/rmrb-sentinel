@@ -12,3 +12,4 @@ venv/
 dist/
 build/
 .DS_Store
+SKILL.md
