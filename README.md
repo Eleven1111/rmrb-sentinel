@@ -1,4 +1,4 @@
-# 🗞️ RMRB Sentinel
+# 🗞️ RMRB-Canary
 
 <p align="center">
   <strong>政策信号早期预警系统</strong><br/>
@@ -16,7 +16,7 @@
 
 > **当一个行业被点名，往往已经太晚了。**
 >
-> RMRB Sentinel 在政策信号进入公众视野之前捕捉它——通过对官方媒体叙事的系统性解读，将预警时间从「运动期」前移到「铺垫期」。
+> RMRB-Canary 在政策信号进入公众视野之前捕捉它——通过对官方媒体叙事的系统性解读，将预警时间从「运动期」前移到「铺垫期」。
 
 ---
 
@@ -24,14 +24,14 @@
 
 大多数企业在看到媒体密集报道时才意识到监管压力——那时政策已进入执行阶段，调整窗口所剩无几。
 
-RMRB Sentinel 的目标是**把预警时间前移**：在关键词出现频次还不高、但信号结构已经在变化时，给出可操作的风险判断。
+RMRB-Canary 的目标是**把预警时间前移**：在关键词出现频次还不高、但信号结构已经在变化时，给出可操作的风险判断。
 
 ---
 
 ## 核心能力
 
 **叙事框架识别**
-同一议题在不同官方叙事框架下含义截然不同。RMRB Sentinel 自动判断目标议题的叙事归属，这是后续所有信号解读的基准。
+同一议题在不同官方叙事框架下含义截然不同。RMRB-Canary 自动判断目标议题的叙事归属，这是后续所有信号解读的基准。
 
 **话语强度分级**
 官方表述有温度之分，从「研究探索」到「专项打击」之间存在可量化的梯度。系统实时追踪强度变化，检测非线性突变。
@@ -64,8 +64,8 @@ pip install requests beautifulsoup4
 **克隆仓库**
 
 ```bash
-git clone https://github.com/Eleven1111/rmrb-sentinel.git
-cd rmrb-sentinel
+git clone https://github.com/Eleven1111/rmrb-canary.git
+cd rmrb-canary
 ```
 
 **运行分析**
@@ -106,7 +106,7 @@ python3 -m agent.agent --keyword 光伏 --compact --skip-media 2>/dev/null \
 
 ## 与 Claude Code 协作
 
-RMRB Sentinel 只做计算，不做推理。它输出结构化 JSON，由 Claude Code 完成语义解读、报告撰写和战略建议。两者职责清晰，互不越界。
+RMRB-Canary 只做计算，不做推理。它输出结构化 JSON，由 Claude Code 完成语义解读、报告撰写和战略建议。两者职责清晰，互不越界。
 
 详细分析框架和使用指南请参见 [SKILL.md](./SKILL.md)（需配合 Claude Code 使用）。
 
@@ -115,7 +115,7 @@ RMRB Sentinel 只做计算，不做推理。它输出结构化 JSON，由 Claude
 ## 目录结构
 
 ```
-rmrb-sentinel/
+rmrb-canary/
 ├── agent/
 │   ├── agent.py          # 主管道
 │   ├── tools/            # 各分析模块
@@ -125,7 +125,7 @@ rmrb-sentinel/
 └── README.md
 ```
 
-历史分析保存至 `~/.rmrb_sentinel/history.db`（SQLite），跨会话持久化。
+历史分析保存至 `~/.rmrb_canary/history.db`（SQLite），跨会话持久化。
 
 ---
 

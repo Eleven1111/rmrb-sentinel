@@ -25,7 +25,7 @@ def fetch_rmrb(keywords: list[str], date: str | None = None) -> dict:
       summary dict，包含 step0_narrative / step1_agenda / step6_intensity /
       ministry_signals / articles / full_texts 等字段
     """
-    output_dir = os.path.expanduser('~/.rmrb_sentinel/data')
+    output_dir = os.path.expanduser('~/.rmrb_canary/data')
     summary = rmrb_fetch.fetch(
         date_str=date,
         keywords=keywords,

@@ -1,12 +1,12 @@
 """
-SQLite 历史存储层 — rmrb-sentinel agent
+SQLite 历史存储层 — rmrb-canary agent
 
 三张表：
   analyses           — 每次分析的摘要（叙事框架、话语强度、部委协同、风险灯）
   intensity_snapshots — 每次分析的七级话语强度分布（用于趋势对比）
   article_records    — 每篇文章的核心字段（供回溯验证）
 
-数据库位置：~/.rmrb_sentinel/history.db（跨会话持久化）
+数据库位置：~/.rmrb_canary/history.db（跨会话持久化）
 """
 
 import sqlite3
@@ -14,7 +14,7 @@ import json
 import os
 import datetime
 
-DB_DIR = os.path.expanduser('~/.rmrb_sentinel')
+DB_DIR = os.path.expanduser('~/.rmrb_canary')
 DB_PATH = os.path.join(DB_DIR, 'history.db')
 
 SCHEMA = """

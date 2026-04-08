@@ -1,5 +1,5 @@
 """
-media_fetch.py — 多源媒体数据采集脚本（rmrb-sentinel 交叉验证层）
+media_fetch.py — 多源媒体数据采集脚本（rmrb-canary 交叉验证层）
 在 rmrb_fetch.py 基础上新增：
   - 百度新闻：按关键词搜索近 N 天报道（聚合新华社/央视/人民网等官媒），判断央媒联动程度
   - 微博热搜：抓取当前热搜榜，判断议题是否进入民间舆论圈
@@ -41,7 +41,7 @@ PEOPLE_RSS_CHANNELS = [
 ]
 
 RSS_HEADERS = {
-    'user-agent': 'Mozilla/5.0 (compatible; RSSBot/1.0; rmrb-sentinel)',
+    'user-agent': 'Mozilla/5.0 (compatible; RSSBot/1.0; rmrb-canary)',
     'accept': 'application/rss+xml, application/xml, text/xml, */*',
 }
 

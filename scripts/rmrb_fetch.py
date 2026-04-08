@@ -1,6 +1,6 @@
 """
 rmrb_fetch.py — 人民日报最新数据采集脚本
-基于 caspiankexin/people-daily-crawler-date 第3版，针对 rmrb-sentinel skill 优化
+基于 caspiankexin/people-daily-crawler-date 第3版，针对 rmrb-canary skill 优化
 
 优化点：
   1. 自动获取最新一期（今天/昨天自动回退，无需手动输入日期）
@@ -253,7 +253,7 @@ def fetch(date_str=None, keywords=None, output_dir='./rmrb_data'):
 
 def build_summary(date_label, articles, keywords):
     """
-    构建直接喂入 rmrb-sentinel 分析主流程的评分摘要。
+    构建直接喂入 rmrb-canary 分析主流程的评分摘要。
 
     新增维度（2026版）：
       - step0_narrative:   叙事框架识别（零步）
@@ -457,7 +457,7 @@ def build_summary(date_label, articles, keywords):
 
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description='人民日报最新数据采集（rmrb-sentinel 专用）')
+    parser = argparse.ArgumentParser(description='人民日报最新数据采集（rmrb-canary 专用）')
     parser.add_argument('--date',    help='指定日期 YYYYMMDD，默认自动获取最新一期')
     parser.add_argument('--keyword', nargs='+', dest='keywords', help='关键词过滤（空格分隔多个词）')
     parser.add_argument('--output',  default='./rmrb_data', help='输出目录，默认 ./rmrb_data')

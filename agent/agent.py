@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-RMRB Sentinel Agent — 政策信号分析管道
+RMRB-Canary Agent — 政策信号分析管道
 
 纯计算管道，不调用任何 LLM API。
 输出结构化 JSON，由 Claude Code / OpenClaw 读取后完成推理和报告撰写。
@@ -138,7 +138,7 @@ def run_pipeline(keywords: list[str], date: str = None, skip_media: bool = False
 
 def main():
     parser = argparse.ArgumentParser(
-        description='RMRB Sentinel — 政策信号分析管道（纯计算，零 LLM 调用）',
+        description='RMRB-Canary — 政策信号分析管道（纯计算，零 LLM 调用）',
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 在 Claude Code 中使用：
